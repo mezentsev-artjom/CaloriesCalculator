@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>Calories Calculator</title>
+    <title>Item/Price Counter</title>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper blue?">
             <div class="container">
-                <a href="#" class="brand-logo center">Track Calories</a>
+                <a href="#" class="brand-logo center">item counter</a>
             </div>
         </div>
     </nav>
@@ -20,20 +20,20 @@
 
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Add meal/ Food item</span>
+                <span class="card-title">Add item/ item price</span>
                 <form class="col">
                     <div class="row">
                         <div class="input-field col s6">
                             <input type="text" id="item-name" placeholder="Add item">
-                            <label for="item-name">Meal</label>
+                            <label for="item-name">Item</label>
                         </div>
 
                         <div class="input-field col s6">
-                            <input type="number" id="item-calories" placeholder="Add Calories">
-                            <label for="item-calories">Calories</label>
+                            <input type="number" id="item-price" placeholder="Add Price">
+                            <label for="item-price">Price</label>
                         </div>
 
-                        <button id="add" class="add-btn btn blue darken-3"><i class="fa fa-plus">Add Meal</i></button>
+                        <button id="add" class="add-btn btn blue darken-3"><i class="fa fa-plus">Add item</i></button>
 
                     </div>
                 </form>
@@ -41,8 +41,8 @@
         </div>
         
         <h3 class="center-align">
-        Total Calories:
-        <span class="total-calories">0</span>
+        Total Price:
+        <span class="total-price">0</span>
         </h3>
 
         <ul class="collection" id="item-list">

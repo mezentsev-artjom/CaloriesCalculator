@@ -1,7 +1,7 @@
 const addButton = document.getElementById('add');
-const foodName = document.querySelector('#item-name');
-const foodCalories = document.querySelector('#item-calories');
-const totalSpan = document.querySelector('.total-calories');
+const itemName = document.querySelector('#item-name');
+const itemPrice = document.querySelector('#item-price');
+const totalSpan = document.querySelector('.total-price');
 const list = document.querySelector('#item-list');
 let total = 0;
 
@@ -9,23 +9,23 @@ let total = 0;
 
 
 addButton.addEventListener('click', (event)=>{
-    let mealName = foodName.value;
-    let mealCalories = parseInt(foodCalories.value);
-    total = total + mealCalories;
+    let itemmName = itemName.value;
+    let itemmPrice = parseInt(itemPrice.value);
+    total = total + itemmPrice;
     totalSpan.innerHTML = total;
 
     let listItem = document.createElement('li');
     listItem.classList.add('collection-item');
-    let text = `Food: ${mealName}. Calories: ${mealCalories}`;
+    let text = `Item: ${itemmName}. Price: ${itemmPrice}`;
     listItem.appendChild(document.createTextNode(text));
     console.log(listItem);
     list.appendChild(listItem);
 
-    foodName.value = '';
-    foodCalories.value = '';
+    itemName.value = '';
+    itemPrice.value = '';
 
-    console.log('Food:', typeof(mealName));
-    console.log('Calories', typeof(mealCalories));
+    console.log('Item:', typeof(itemmName));
+    console.log('Price', typeof(itemmPrice));
     console.log('Total:', total);
 
 
